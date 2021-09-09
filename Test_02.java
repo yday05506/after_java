@@ -3,7 +3,7 @@ public class Test_02 {
 
 	public static void main(String[] args) {
 //		int num;
-//		num = (int)17.5;	강제 형변환
+//		num = (int)17.5;	媛뺤젣 �삎蹂��솚
 //		System.out.println(num);
 		
 //		char ch = 'A';
@@ -20,9 +20,14 @@ public class Test_02 {
 //		String str2 = "B";
 //		System.out.println(str1 + str2);
 		
-		char str1 = 'A';
-		char str2 = 'B';
+		String str1 = new String("Hi");
+		String str1 = new String("Hi");
 		System.out.println(str1 + str2);
+		
+		if(str1.equals(str2))
+			System.out.println("같다.");
+		else
+			System.out.println("다르다.");
 	}
 
 }
