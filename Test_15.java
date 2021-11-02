@@ -25,10 +25,11 @@ public class Test_15 {
 		System.out.print("정수 입력 : ");
 		int su = sc.nextInt();
 		
-		while(true) {
+		while(su >= i) {
 			i++;
-			if(su % i == 0)
+			if(su % i == 0) {
 				System.out.println(i);
+			}
 		}
 	}
 
