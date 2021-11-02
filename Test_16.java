@@ -11,7 +11,7 @@ public class Test_16 {
 		int n;
 		int cnt = 0;
 		int sum = 0;
-		int average = 1;
+		double average = 1;
 		
 		while(true) {
 			System.out.print("정수 입력 : ");
