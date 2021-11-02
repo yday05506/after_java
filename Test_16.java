@@ -24,7 +24,7 @@ public class Test_16 {
 			
 			cnt++;
 			sum += n;
-			average = (sum / cnt);
+			average = ((double)sum / (double)cnt);
 		}
 		System.out.println("합 : " + sum);
 		System.out.println("평균 : " + average);
