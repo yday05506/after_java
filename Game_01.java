@@ -1,6 +1,10 @@
 import java.util.Scanner;
 
 public class Game_01 {
+	
+	public static final int 가위 = 1;
+	public static final int 바위 = 2;
+	public static final int 보 = 3;
 
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
@@ -56,39 +60,51 @@ public class Game_01 {
 //			}
 			
 			//방법 2 : 중급자 코스
-			switch(com) {
-				case 1 :
-					System.out.print("컴퓨터 : 가위 \t");
-					break;
-				case 2 :
-					System.out.print("컴퓨터 : 바위 \t");
-					break;
-				case 3 :
-					System.out.print("컴퓨터 : 보 \t");
-					break;
-			}
-			switch(you) {
-				case 1 :
-					System.out.print("사용자 : 가위 \t");
-					break;
-				case 2 :
-					System.out.print("사용자 : 바위 \t");
-					break;
-				case 3 :
-					System.out.print("사용자 : 보 \t");
-					break;
-				default :
-					System.out.println("1~3 사이의 숫자만 입력해주세요");
-					break;
-			}
+//			switch(com) {
+//				case 1 :
+//					System.out.print("컴퓨터 : 가위 \t");
+//					break;
+//				case 2 :
+//					System.out.print("컴퓨터 : 바위 \t");
+//					break;
+//				case 3 :
+//					System.out.print("컴퓨터 : 보 \t");
+//					break;
+//			}
+//			switch(you) {
+//				case 1 :
+//					System.out.print("사용자 : 가위 \t");
+//					break;
+//				case 2 :
+//					System.out.print("사용자 : 바위 \t");
+//					break;
+//				case 3 :
+//					System.out.print("사용자 : 보 \t");
+//					break;
+//				default :
+//					System.out.println("1~3 사이의 숫자만 입력해주세요");
+//					System.exit(0);
+//			}
+//			
+//			if((you == 1 && com == 3) || (you == 2 && com == 1) || (you == 3 && com == 1))
+//				System.out.println("사용자가 이겼습니다.");
+//			else if(you == com)
+//				System.out.println("비겼습니다.");
+//			else
+//				System.out.println("컴퓨터가 이겼습니다.");
+//			
+//			System.out.println();
 			
-			if((you == 1 && com == 3) || (you == 2 && com == 1) || (you == 3 && com == 1))
+			//방법 2-1 : 메서드 이용
+			System.out.print("컴퓨터 : " + print(com));
+			System.out.print("사용자 : " + print(you));
+			
+			if((you == 가위 && com == 보) || (you == 바위 && com == 가위) || (you == 보 && com == 가위))
 				System.out.println("사용자가 이겼습니다.");
 			else if(you == com)
 				System.out.println("비겼습니다.");
 			else
 				System.out.println("컴퓨터가 이겼습니다.");
-			
 			
 			System.out.println();
 			
@@ -100,6 +116,22 @@ public class Game_01 {
 			
 			System.out.println();
 		}
+	}
+	//2-1
+	static public String print(int su) {
+		String choice;
+		
+		if(su == 1) {
+			choice = "가위";
+		}
+		else if(su == 2) {
+			choice = "바위";
+		}
+		else if(su == 1) {
+			choice = "보";
+		}
+		
+		return choice;
 	}
 
 }
