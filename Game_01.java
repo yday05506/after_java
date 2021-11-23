@@ -112,16 +112,10 @@ public class Game_01 {
 			System.out.print("컴퓨터 : " + print(com));
 			System.out.print("사용자 : " + print(you));
 			switch(you - com) {
-				case -2 :
+				case -2 : case 1 :
 					System.out.println("사용자가 이겼습니다.");
 					break;
-				case 1 :
-					System.out.println("사용자가 이겼습니다.");
-					break;
-				case -1 : 
-					System.out.println("컴퓨터가 이겼습니다.");
-					break;
-				case 2 : 
+				case -1 : case 2 : 
 					System.out.println("컴퓨터가 이겼습니다.");
 					break;
 				case 0 :
