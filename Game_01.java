@@ -96,16 +96,38 @@ public class Game_01 {
 //			System.out.println();
 			
 			//방법 2-1 : 메서드 이용
+//			System.out.print("컴퓨터 : " + print(com));
+//			System.out.print("사용자 : " + print(you));
+//			
+//			if((you == 가위 && com == 보) || (you == 바위 && com == 가위) || (you == 보 && com == 가위))
+//				System.out.println("사용자가 이겼습니다.");
+//			else if(you == com)
+//				System.out.println("비겼습니다.");
+//			else
+//				System.out.println("컴퓨터가 이겼습니다.");
+//			
+//			System.out.println();
+			
+			//방법 3 : 상급자 코스
 			System.out.print("컴퓨터 : " + print(com));
 			System.out.print("사용자 : " + print(you));
-			
-			if((you == 가위 && com == 보) || (you == 바위 && com == 가위) || (you == 보 && com == 가위))
-				System.out.println("사용자가 이겼습니다.");
-			else if(you == com)
-				System.out.println("비겼습니다.");
-			else
-				System.out.println("컴퓨터가 이겼습니다.");
-			
+			switch(you - com) {
+				case -2 :
+					System.out.println("사용자가 이겼습니다.");
+					break;
+				case 1 :
+					System.out.println("사용자가 이겼습니다.");
+					break;
+				case -1 : 
+					System.out.println("컴퓨터가 이겼습니다.");
+					break;
+				case 2 : 
+					System.out.println("컴퓨터가 이겼습니다.");
+					break;
+				case 0 :
+					System.out.println("비겼습니다.");
+					break;
+			}
 			System.out.println();
 			
 			System.out.print("계속하시겠습니까? (y or n) : ");
