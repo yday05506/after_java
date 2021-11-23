@@ -109,13 +109,29 @@ public class Game_01 {
 //			System.out.println();
 			
 			//방법 3 : 상급자 코스
+//			System.out.print("컴퓨터 : " + print(com));
+//			System.out.print("사용자 : " + print(you));
+//			switch(you - com) {
+//				case -2 : case 1 :
+//					System.out.println("사용자가 이겼습니다.");
+//					break;
+//				case -1 : case 2 : 
+//					System.out.println("컴퓨터가 이겼습니다.");
+//					break;
+//				case 0 :
+//					System.out.println("비겼습니다.");
+//					break;
+//			}
+//			System.out.println();
+			
+			//방법 4 : 최상급자 코스
 			System.out.print("컴퓨터 : " + print(com));
 			System.out.print("사용자 : " + print(you));
-			switch(you - com) {
-				case -2 : case 1 :
+			switch((you - com+3)%3) {
+				case 1 :
 					System.out.println("사용자가 이겼습니다.");
 					break;
-				case -1 : case 2 : 
+				case 2 : 
 					System.out.println("컴퓨터가 이겼습니다.");
 					break;
 				case 0 :
