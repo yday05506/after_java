@@ -23,11 +23,15 @@ public class Test_19 {
 			System.out.print(ballArr[i] + " ");
 		}
 		
+		//방법 1
 //		ball3[0] = ballArr[0];
 //		ball3[1] = ballArr[1];
 //		ball3[2] = ballArr[2];
-		for(int i = 0; i < ball3.length; i ++)
-			ball3[i] = ballArr[i];
+		//방법 2
+//		for(int i = 0; i < ball3.length; i ++)
+//			ball3[i] = ballArr[i];
+		//방법 3
+		System.arraycopy(ballArr, 3, ball3, 0, 3);
 		
 		System.out.println();
 //		System.out.println(ball3[0] + " " + ball3[1] + " " + ball3[2]);
