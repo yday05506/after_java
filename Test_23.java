@@ -26,6 +26,12 @@ public class Test_23 {
 			else if (a[i] < min) min = a[i];
 		}
 		
+		System.out.print("원본 데이터 : ");
+		for(int i = 0; i <a.length; i++) 
+			System.out.print(a[i]+ " ");
+		
+		System.out.println();
+		
 		System.out.println("최대값 : " + max + ", 최소값 : " + min);
 
 	}
