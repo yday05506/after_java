@@ -13,7 +13,7 @@ public class DynamicArrayScore {
 		double avg = 0;
 		String name;
 		int score = 0;
-		int sum = 0;
+		int[] sum = new int[stuNum];
 		
 		int[][] scores = new int[stuNum][];
 		
@@ -28,7 +28,7 @@ public class DynamicArrayScore {
 			for (int j = 0; j < scores[i].length; j++) {
 				System.out.print(j+1+"과목 성적 입력 : ");
 				scores[i][j] = sc.nextInt();
-				sum += scores[i][j];
+				sum[i] += scores[i][j];
 			}
 			System.out.println();
 		}
@@ -39,8 +39,8 @@ public class DynamicArrayScore {
 			for(int j = 0; j < scores[i].length; j++) {
 				System.out.print(scores[i][j] + "\t");
 			}
-			System.out.print("합계 : " + sum + "\t");
-			System.out.printf("평균 : %.1f\n", ((double)sum / scores[i].length));
+			System.out.print("합계 : " + sum[i] + "\t");
+			System.out.printf("평균 : %.1f\n", ((double)sum[i] / scores[i].length));
 		}
 		sc.close();
 
